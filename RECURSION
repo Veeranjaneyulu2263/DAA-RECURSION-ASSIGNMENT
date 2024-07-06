@@ -382,26 +382,7 @@ A = [ 1, 2, 3, 4, 5 ]
 printTriangle(A)
 
 
-27.Given an array of integers nums which is sorted in ascending order, and an integer target,
-write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
-You must write an algorithm with O(log n) runtime complexity.
-CODE:
-class Solution:
-    def search(self, nums: List[int], target: int) -> int:
-        l=0
-        r =  len(nums) -1
-        while l <= r:
-            mid = l + ((r - l) // 2)
-            if nums[mid] > target:
-                r = mid - 1
-            elif nums[mid] < target:
-                l = mid + 1
-            else:
-                return mid
-        return -1 
-
-
-28.Perform Bubble Sort using Recursion?
+27.Perform Bubble Sort using Recursion?
 CODE:
 def recursive_bubble_sort(arr, n):
     if n == 1:
@@ -416,7 +397,7 @@ recursive_bubble_sort(array, len(array))
 print("Sorted Array:", array)
 
 
-29.Perform Insertion Sort using Recursion?
+28.Perform Insertion Sort using Recursion?
 CODE:
 def recursive_insertion_sort(arr, n):
     if n <= 1:
@@ -430,7 +411,7 @@ def recursive_insertion_sort(arr, n):
     arr[j + 1] = last_element
 
 
-30.Reverse a Linked List using recursion?
+29.Reverse a Linked List using recursion?
 CODE:
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -438,7 +419,7 @@ class ListNode:
         self.next = next
 
 
-31.Merge two sorted Linked Lists using recursion?
+30.Merge two sorted Linked Lists using recursion?
 CODE:
 def print_linked_list(head):
     current = head
@@ -457,7 +438,7 @@ print("Merged Linked List:")
 print_linked_list(merged_head)
 
 
-32.Print all leaf nodes of a Binary Search Tree using recursion?
+31.Print all leaf nodes of a Binary Search Tree using recursion?
 CODE:
 root = TreeNode(4)
 root.left = TreeNode(2)
@@ -469,33 +450,6 @@ root.right.right = TreeNode(7)
 print("Leaf nodes of the BST:")
 print_leaf_nodes(root)
 
-
-33.Solve the Towers of Hanoi problem?
-CODE:
-def towers_of_hanoi(n, source, auxiliary, destination):
-    if n == 1:
-        print(f"Move disk 1 from {source} to {destination}")
-        return
-    towers_of_hanoi(n-1, source, destination, auxiliary)
-    print(f"Move disk {n} from {source} to {destination}")
-    towers_of_hanoi(n-1, auxiliary, source, destination)
-n = 3
-source = 'A'
-auxiliary = 'B'
-destination = 'C'
-print(f"Solving Towers of Hanoi for {n} disks:")
-towers_of_hanoi(n, source, auxiliary, destination)
-
-
-34.Compute the GCD of two numbers using Euclidean Algorithm?
-CODE:
-def gcd(a, b):
-    if b == 0:
-        return a
-    return gcd(b, a % b)
-num1 = 48
-num2 = 18
-print(f"The GCD of {num1} and {num2} is:", gcd(num1, num2))
 
 
 
